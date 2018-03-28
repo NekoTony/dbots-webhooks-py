@@ -1,1 +1,3 @@
 # dbots-webhooks-py
+
+Just an example for using webhooks for DiscordBots.org with python and flask. Will update soon...
