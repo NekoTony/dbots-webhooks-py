@@ -1,0 +1,7 @@
+{
+  "botid" : "274620011744854029",
+  "auth" : "auth",
+  "post" : "/post/too",
+  "voteurl" : "https://discordbots.org/bot/alice/vote",
+  "upvotepath" : "upvotes.json"
+}
