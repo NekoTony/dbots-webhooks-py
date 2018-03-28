@@ -22,9 +22,8 @@ class Upvote:
             check = self.write_userids(today, userid)
             if check == "already_voted":
                 return await ctx.send("You already voted, please try again tommorow.")
-            await ctx.send("Whoop, seems like you voted. Here's your reward: ____")
-        else:
-            await ctx.send("Seems like you haven't voted. You can vote here: {}".format(self.get_config("voteurl")))
+            return await ctx.send("Whoop, seems like you voted. Here's your reward: ____")
+        await ctx.send("Seems like you haven't voted. You can vote here: {}".format(self.get_config("voteurl")))
 
 
     def get_config(self, key=None):
