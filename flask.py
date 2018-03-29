@@ -30,7 +30,7 @@ def get_config(key=None):
 def write_userids(key, id):
     data = get_userids()
     if get_userids(key) is False:
-	if conf["miss"] == 1:
+	if conf["reset"] == 1:
 	    data = {}
         data[key] = []
         data[key + "_voted"] = []
