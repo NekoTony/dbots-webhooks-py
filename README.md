@@ -46,5 +46,18 @@ Once you config it, start the flask server and the **upvotes.json** will update 
 
 **Storage:**
 
-All upvotes are stored in a .json file and can be easily accessed with simple json knowledge. Here's an example to access them:
+All upvotes are stored in a .json file and can be easily accessed with simple json knowledge or by using the functions provided. Here's an example to access them:
 
+    import json
+    from datetime import datetime
+    
+    today = datetime.today().strftime('%Y-%m-%d') #Get todays date 
+    upvotes = get_userids() #Get the entire json file.
+    today_vote = upvotes[today] #Current Data Vote
+    
+    #You can also get today's vote by doing this
+    today_vote  = get_userids(today)
+
+All dates are formatted like this: `2018-03-29`
+
+It should be easy to use to access.
