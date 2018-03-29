@@ -4,5 +4,5 @@
   "post" : "/post/too",
   "voteurl" : "https://discordbots.org/bot/alice/vote",
   "upvotepath" : "upvotes.json",
-  "miss" : True,
+  "miss" : 0,
 }
