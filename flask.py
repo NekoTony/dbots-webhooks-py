@@ -56,5 +56,9 @@ def dbotsorg():
             write_userids(today, userid)
     return ''
 
+@app.route('/')
+def hello_world():
+    return 'Your server is up and running!'
+
 if __name__ == '__main__':
    app.run(debug = True)
