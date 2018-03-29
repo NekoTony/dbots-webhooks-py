@@ -48,7 +48,7 @@ class Upvote:
     def write_userids(self, key, id):
         data = self.get_userids()
         if self.get_userids(key) is False:
-            if self.get_config("miss") == 1:
+            if self.get_config("reset") == 1:
                 data = {}
             data[key] = []
             data[key + "_voted"] = []
