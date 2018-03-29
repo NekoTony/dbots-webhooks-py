@@ -12,7 +12,10 @@ class Upvote:
 
     @commands.command(hidden=True)
     async def vote(self, ctx):
-        """Vote Command"""
+        """Vote Command
+        
+        Made by NekoTony
+        """
 
         today = datetime.today().strftime('%Y-%m-%d')
         voters = self.get_userids(today)
@@ -45,6 +48,8 @@ class Upvote:
     def write_userids(self, key, id):
         data = self.get_userids()
         if self.get_userids(key) is False:
+            if self.get_config("miss") == 1:
+                data = {}
             data[key] = []
             data[key + "_voted"] = []
         if id in data[key + "_voted"]:
