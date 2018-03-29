@@ -3,5 +3,6 @@
   "auth" : "auth",
   "post" : "/post/too",
   "voteurl" : "https://discordbots.org/bot/alice/vote",
-  "upvotepath" : "upvotes.json"
+  "upvotepath" : "upvotes.json",
+  "miss" : True,
 }
