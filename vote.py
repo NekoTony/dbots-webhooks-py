@@ -20,7 +20,11 @@ class Upvote:
         today = datetime.today().strftime('%Y-%m-%d')
         voters = self.get_userids(today)
         userid = str(ctx.author.id)
-
+        
+        if voters is False:
+            self.write_userids(today)
+            voters = self.get_userids(today)
+            
         if userid in voters:
             check = self.write_userids(today, userid)
             if check == "already_voted":
@@ -45,16 +49,17 @@ class Upvote:
             return False
         return data[key]
 
-    def write_userids(self, key, id):
+    def write_userids(self, key, id=None):
         data = self.get_userids()
         if self.get_userids(key) is False:
             if self.get_config("reset") == 1:
                 data = {}
             data[key] = []
             data[key + "_voted"] = []
-        if id in data[key + "_voted"]:
-            return "already_voted"
-        data[key + "_voted"].append(id)
+        if id is not None:
+            if id in data[key + "_voted"]:
+                return "already_voted"
+            data[key + "_voted"].append(id)
         with open(self.get_config("upvotepath"), 'w') as x:
             json.dump(data, x)
         return True
