@@ -5,4 +5,5 @@
   "voteurl" : "https://discordbots.org/bot/alice/vote",
   "upvotepath" : "upvotes.json",
   "reset" : 0,
+  "configpath" : "config.json",
 }
